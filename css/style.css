@@ -1,0 +1,371 @@
+/*
+ * V-1.0
+ * 
+ * Little Neon Taco
+ * Design – Aaron Bloom 
+ * Website – andrewww.co
+ * Made with ❤️ in Seattle
+ * 
+ */
+
+
+
+
+/* ----------------------------------------      
+HTML RESET 
+---------------------------------------- */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+}
+
+body { 
+	font-size:100%; 
+	line-height: 1;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: none; 
+	background: #F9F5F1;
+	color: #211F1F;
+	font-family: 'Crimson Text', serif;
+	font-family: 16px;
+	line-height: 22px;
+}
+
+
+/* ----------------------------------------      
+Text Select 
+---------------------------------------- */
+::selection { background: #211F1F; color: #F9F5F1; }
+::-moz-selection { background: #211F1F; color: #F9F5F1;}
+
+
+/* ----------------------------------------      
+Custom Scroll Bar
+---------------------------------------- */
+::-webkit-scrollbar {
+    width: .6em;
+}
+::-webkit-scrollbar-button {
+    background: #211F1F;
+}
+::-webkit-scrollbar-track-piece {
+    background: #F9F5F1;
+}
+::-webkit-scrollbar-thumb {
+    background: #211F1F;
+}
+
+/* ----------------------------------------      
+HTML RESET 
+---------------------------------------- */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, label, legend { display: block; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-spacing: 0; }
+
+/* ----------------------------------------      
+Clearfixes 
+---------------------------------------- */
+.row:before,.row:after,.clearfix:before,.clearfix:after{content:'';display:table}
+.row:after,.clearfix:after{clear:both}
+.row,.clearfix{zoom:1}
+
+
+/* ----------------------------------------      
+Grid 
+---------------------------------------- */
+*{box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;}
+body{margin:0 auto; color:#211F1F;}
+.grid{margin:0 auto; max-width:1600px; width:100%;} 
+.g1500{margin:0 auto; max-width:1500px; width:100%;}
+.g1400{margin:0 auto; max-width:1400px; width:100%;}
+.g1200{margin:0 auto; max-width:1200px; width:100%;}
+.g1140{margin:0 auto; max-width:1140px; width:100%;}
+.g1024{max-width:1024px; width:100%;}
+.gmax{max-width:100%; width:100%;}
+.g960{margin:0 auto; max-width:960px; width:100%;}
+.row{width:100%; margin:0 auto;}
+.c1{width:8.33%;}
+.c2{width:16.66%;}
+.c3{width:25%;}
+.c4{width:32%;}
+.c5{width:41.66%;}
+.c6{width:50%;}
+.c7{width:58.33%;}
+.c8{width:66.66%;}
+.c9{width:75%;}
+.c10{width:83.33%;}
+.c11{width:91.66%;}
+.c12{width:100%; min-height:1px; float:left; position:relative;}
+.c1-5{width:20%;}/* This column can be used as a one fifth of the row */
+.c1-8{width:12.5%;}/* This column can be used as a one eigth of the row */ 
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c1-5,.c1-8 {
+	min-height:1px; 
+	float:left; 
+	position:relative;
+}
+
+.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+	padding-left: 0; 
+	position:relative;
+}
+.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+	padding-right: 0; 
+	position:relative;
+}
+
+/* ----------------------------------------      
+Alignments
+---------------------------------------- */
+.centered{float: none; margin: auto;}
+.left {float: left;}
+.right {float: right;}
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+/* ----------------------------------------      
+Spacing
+---------------------------------------- */
+.space-top {margin-top: 20px;}
+.space-bot {margin-bottom: 20px;}
+.space-top40 {margin-top: 40px;}
+.space-bot40 {margin-bottom: 40px;}
+.space-top60 {margin-top: 60px;}
+.space-bot60 {margin-bottom: 60px;}
+.space-top80 {margin-top: 80px;}
+.space-bot80 {margin-bottom: 80px;}
+.space-top100 {margin-top: 100px;}
+.space-bot100 {margin-bottom: 100px;}
+.space-top120 {margin-top: 120px;}
+.space-bot120 {margin-bottom: 120px;}
+.space-top150 {margin-top: 150px;}
+.space-bot150 {margin-bottom: 150px;}
+
+.padded60 {
+	padding: 60px;
+}
+
+/* ----------------------------------------      
+Colors
+---------------------------------------- */
+.white { color: #fff;}
+.white-bg { background: #fff; }
+
+.black { color: #000;}
+.black-bg { background: #000; }
+
+
+/* ----------------------------------------      
+Typography
+---------------------------------------- */
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: none; 
+	font-style: normal; 
+	text-rendering: optimizeLegibility; 
+	line-height: 1.1; 
+	margin-bottom: 10px; 
+	margin-top: 10px; 
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { 
+	font-weight: inherit; 
+	text-decoration:none; 
+}
+h1 {display: none; text-indent: -9999px;}
+h2 {font-size: 40px; line-height: 42px;}
+h3 {font-size: 28px; line-height: 36px;}
+h4 {font-size: 24px; line-height: 32px;}
+h5 {font-size: 21px; line-height: 27px;}
+h6 {font-size: 18px; line-height: 27px;}
+
+a {
+    text-decoration: none;
+    line-height: inherit;
+    color: inherit;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+a:hover {color: #ffff00; }
+a:focus {color: #ffff00; outline: none; }
+
+p { margin-bottom: 10px; padding:0; }
+p span {color: #46aae3; }
+p a, p a:visited {line-height: inherit; }
+
+i { font-style: italic; line-height: inherit; }
+strong, b { font-weight: bold; line-height: inherit; }
+small { font-size: 70%; line-height: inherit; }
+
+
+/* ----------------------------------------      
+Lists
+---------------------------------------- */
+ul, ol, dl { margin-bottom: 8px; list-style-position: inside; }
+li { list-style-type: none; }
+ul li ul, ul li ol { margin-bottom: 0; }
+ol li ul, ol li ol { margin-bottom: 0; }
+
+
+/* ----------------------------------------      
+Images
+---------------------------------------- */
+img { display: block; max-width: 100%; height: auto; }
+
+
+
+.logo {
+	background-image: url(/img/neon-taco-logo.png);
+	display: block;
+	float:left;
+	background-size: 379px 140px;
+	width: 379px;
+	height: 140px;
+}
+
+.small-logo {
+	background-image: url(/img/small-logo.png);
+	display: block;
+	float:left;
+	background-size: 43px 143px;
+	width: 43px;
+	height: 143px;
+	position: fixed;
+	top: 60px;
+	right: 60px;
+}
+
+.address {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	margin-top: 350px;
+	position: fixed;
+    top: -15px;
+    right: -30px;
+	display: block;
+}
+
+
+.menu li {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.menu-description {
+	display: inline-block;
+	float: left;
+	font-style: italic;
+	padding-left: 3px;
+	padding-right: 20px;
+}
+
+.menu-title {
+	display: inline-block;
+	float: left;
+}
+
+
+.pink-wave {
+	background-image: url(/img/pink-flag.png);
+	display: block;
+	float:left;
+	background-size: 1863px 500px;
+	width: 100%;
+	height: 500px;
+	-webkit-animation: marquee 200s infinite linear;
+}
+
+
+@-webkit-keyframes marquee {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: -20000px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------      
+Media Queries
+---------------------------------------- */
+/* Media query for 1024 Screens */
+@media only screen and (max-width:1024px){
+}
+
+/* Media query for 960 Screens - sets nested grids to 100% */
+@media only screen and (max-width:960px){
+	.row .row .c1,.row .row .c2,.row .row .c3,.row .row .c4,.row .row .c5,.row .row .c6,.row .row .c7,.row .row .c8,.row .row .c9,.row .row .c10,.row .row .c11,.row .row .c12,.row .row .c1-5,.row .row .c1-8{
+		width:100%;
+		margin-bottom:20px;
+		margin-left:0px;
+		margin-right:0px; 
+	}
+	.row .row > div:last-child{margin-bottom:0 !important}
+}
+
+/* Media query for iPad and tablets */
+@media handheld, only screen and (max-width: 768px), only screen and (max-device-width: 768px) and (orientation:portrait){
+	body{font-size:90%}
+	.row{margin-bottom:0!important}
+
+	.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,.c11,.c12,.c1-5,.c1-8{
+		width:100%;
+		margin-right:0;
+		margin-left:0;
+		margin-bottom:20px; 
+		padding:0px;
+	}
+
+	.c1.first,.c2.first,.c3.first,.c4.first,.c5.first,.c6.first,.c7.first,.c8.first,.c9.first,.c10.first,.c11.first,.c1-5.first,.c1-8.first {
+		padding-left: 0px; 
+		position:relative;
+	}
+
+	.c1.last,.c2.last,.c3.last,.c4.last,.c5.last,.c6.last,.c7.last,.c8.last,.c9.last,.c10.last,.c11.last,.c1-5.last,.c1-8.last {
+		padding-right: 0px; 
+		position:relative;
+	}
+
+	/* ---- Spacing ---- */
+	.space-top40 {margin-top: 20px;}
+	.space-bot40 {margin-bottom: 20px;}
+	.space-top60 {margin-top: 20px;}
+	.space-bot60 {margin-bottom: 20px;}
+	.space-top80 {margin-top: 20px;}
+	.space-bot80 {margin-bottom: 20px;}
+	.space-top100 {margin-top: 20px;}
+	.space-bot100 {margin-bottom: 20px;}
+	.space-top120 {margin-top: 20px;}
+	.space-bot120 {margin-bottom: 20px;}
+	.space-top150 {margin-top: 20px;}
+	.space-bot150 {margin-bottom: 20px;}
+	}
